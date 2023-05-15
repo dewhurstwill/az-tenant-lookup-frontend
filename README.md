@@ -1,6 +1,6 @@
 # Azure Tenant ID Lookup - Frontend
 
-Ever needed to get the tenantId based on the Azure AD domain? This frontend makes use of [this API](https://github.com/dewhurstwill/az-tenant-lookup).
+Ever needed to get the tenantId based on the Azure AD domain?
 
 ## Basic/Dev Use
 
