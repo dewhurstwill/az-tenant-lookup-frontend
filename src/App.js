@@ -19,7 +19,7 @@ function handleLookup(
   searchQuery
 ) {
   fetchFeed(
-    `${url}/${searchQuery}`,
+    `https://login.microsoftonline.com/${searchQuery}/.well-known/openid-configuration`,
     setApiResponseData,
     setIsLoadingArticles
   );
