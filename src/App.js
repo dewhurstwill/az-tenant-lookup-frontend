@@ -109,22 +109,20 @@ function App() {
                   {(
                     !isLoadingResponseData && 
                     apiResponseData &&
-                    apiResponseData.data
+                    apiResponseData.token_endpoint
                   ) ? (
-                    <p>{ apiResponseData.data.tenantId } </p>
+                    <p>{ apiResponseData.token_endpoint } </p>
                   ) : null }
                 </>
               ) : (
                 isViewingResponseData ? (
                   <strong>
                     { 
-                      apiResponseData && 
-                      apiResponseData.data && 
-                      apiResponseData.data.errorMessage ? (
-                        apiResponseData.data.errorMessage
-                      ) : (
+                      !apiResponseData.token_endpoint ? (
                         <p>Oops looks like something went wrong.<br/>
                         Please check back in a moment</p>
+                      ) : (
+                        <></>
                       )
                     }
                   </strong>
@@ -133,7 +131,7 @@ function App() {
             }
           </h1>
           { isLoadingResponseData ? (
-              < LoadingSpinner spinnerStyle={{ width: "200px" }} />
+              <LoadingSpinner spinnerStyle={{ width: "200px" }} />
             ) : null
           }
         </header>
